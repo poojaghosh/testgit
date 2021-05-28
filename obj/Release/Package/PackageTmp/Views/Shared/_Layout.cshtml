@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Block Chain</title>
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="/assets/style-1.css">
+    <link href="/assets/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
+    <style>
+        @@media only screen and (min-width: 64.063em) {
+            .footer p {
+                letter-spacing: 1px;
+                font-size: 10px;
+            }
+        }
+        .footer {
+            background: url(../images/footer-kcp-logo-background.png) top left no-repeat #223167;
+            height: 120px;
+            margin-top: 20px;
+            padding: 25px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        footer {
+            position: relative;
+            margin-top: 150px;
+        }
+        @@media only screen and (min-width: 48em) {
+            .footer p {
+                float: left;
+                font-size: 9px;
+                text-align: left;
+                width: 72%;
+                float: left;
+                margin-bottom: 0;
+                padding-left: 160px;
+                padding-top: 20px;
+            }
+            .footer {
+                height: 72px;
+                background: 0 0;
+                background-color: #223167;
+                padding: 0;
+                right: 0;
+                left: 0;
+            }
+
+                .footer > .row {
+                    background: url(../assets/footer-kcp-logo-background.png) top left no-repeat;
+                    background-size: 140px;
+                    height: 100%;
+                    background-position: 0 -32px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="kcp-wrapper">
+        <div class="load-runner-page">
+            <div class="loader-page"></div>
+        </div>
+        <header class="jumbotron vertical-center d-none d-md-block" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                        <nav class="navbar navbar-expand-sm">
+                            <!-- Brand/logo -->
+                            <a class="navbar-brand" href="@Url.Action("Index","Home")"><img src="/assets/logo-kcp-advantage.jpg" alt="logo" class="my-auto" /></a>
+
+                            <!-- Links -->
+                            <ul class="navbar-nav ml-auto right-side-header-menu">
+                                <li><img class="distributor-icon" src="/assets/menu-icon-distributor.png"> Show distributor SKU code</li>
+                                <li id="myProductListItem"><a href="/my-manage-list"><span>My Lists</span><div class="product-list-number">  49</div></a></li>
+                                <li><a href="/findmyrep" class="newOption"><strong>Find My Rep</strong></a></li>
+                                <li class="desktopOnly show-for-large-only"><a href="/profile">Account</a></li>
+                                <li><a href="/contact-us">Contact Us</a></li>
+                                <li class="desktop-avatar" style="text-align: center;">
+                                    <span class="separator">|  &nbsp;</span><a href="/profile"><span>Hello, <span class="name"> Guest</span>.</span></a><br class="show-for-medium-only">
+
+                                </li>
+                                <li><a href="#" class="logout" onclick="logoutGigyaSession();">Log out</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="second-nav d-none d-md-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div style="display:inline-block">
+                            <img src="/assets/search.jpg" alt="" />
+                        </div>
+                        <div style="display:inline-block">
+
+                            <ul class="navbar-nav" style="margin-left: 79px;">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="/assets/existing-business-tracker-icon.png" alt="" /></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="/assets/menu-icon-cross-reference.png" alt="" /></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="/assets/menu-icon-calculator.png" alt="" /></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="/assets/menu-icon-kcpzone.png" alt="" /></a>
+                                </li>
+                                <li class="nav-item my-cart dropdown">
+                                    <a class="nav-link dropbtn" href="#"><img src="/assets/Sample-Request.png" alt="" /></a>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="/assets/menu-icon-back.png" alt="" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="dropdown-content" onClick="event.stopPropagation();">
+            <div class="load-runner">
+                <div class="loader"></div>
+            </div>
+            <div class="modal-es-header container">
+                <div class="row">
+                    <div class="col text-left subtotal hide-for-saved" style="position:relative;bottom:-10px;">
+                        <span class="eq-width"><b>Price:</b> </span><span id="lblMsrpTotal" class="subtotal money">$0.00</span>
+                    </div>
+                    <div class="col text-right">
+                        <div class="close-wrap">
+                            <a href="javascript:void(0)" class="hoverModalclose"><span>×</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col discount hide-for-saved">
+                        <span class="eq-width"><b>Discount:</b> </span><span id="totalDis" class="totalDis money">$0.00</span>
+                    </div>
+
+                    <div class="col text-right totaliteam hide-for-saved">
+                        Total Items : <span class="itemcount">0</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-left subtotal hide-for-saved" style="position:relative;top:-12px;">
+                        <span class="eq-width"><b>Subtotal:</b> </span><span id="lblSubtotal" class="subtotal money">$0.00</span>
+                    </div>
+                    <div class="col text-right">
+
+                        <div class="button_cont hide-clear-button" align="center">
+                            <a class="example_b button cart-btn" href="javascript:return void(0);" data-toggle="modal" data-target="#clearCartModal" onclick="openClearCartModal();">
+                                Clear Items
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="searchArea">
+                <div id="dtBasicExample_filter" class="dataTables_filter"><label><input type="search" id="txtSearch" class="form-control form-control-sm" placeholder="Search..." aria-controls="dtBasicExample"></label></div>
+            </div>
+            <ul class="nav nav-tabs cart_tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active-on-demand active" data-toggle="tab" href="#cart">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#saved">Saved Item</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="cart" class="cart-container active tab-pane ">
+                    <div class="tab-content sub-content">
+
+                        <div class="scrollbar modal-es-body" id="style-2">
+                            <div class="container" id="tblCartItemContainer">
+
+                            </div>
+                            <div class="force-overflow"></div>
+                        </div>
+
+                        <div class="modal-es-footer">
+                            <div class="input-group">
+
+
+                                <div class="button_cont hide-checkout-button" align="center"><a class="example_f btn btn-primary btn-cart-chkout" href="@Url.Action("CheckOutPage","Home")" rel="nofollow">Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="saved" class="tab-pane scrollbar saved_tab fade">
+
+                </div>
+            </div>
+            <input type="hidden" id="hdnSelectedTab" value="Cart" />
+        </div>
+        <div class="mobile_nav d-md-none">
+            <a class="mobile_logo" href="#"><img src="/assets/logo-kcp-advantage.jpg" alt="logo" class="my-auto"></a>
+            <div class="right_icons">
+                <section class="right-small search-right">
+                    <a class="mobile-search" href="#"><img src="/assets/mobile-search-button.png" width="40%"></a>
+                </section><section class="right-small">
+                    <a class="mobile-cart" href="/sample-request"><img src="/assets/mobile_cart_icon.png" width="40%"></a>
+
+                </section>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+
+        </div>
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <p>All names, logos and trademarks are the property of Kimberly-Clark Worldwide, Inc. Copyright 2020 KCWW. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- The Modal -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Product</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Are you sure, you want delete this product!
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnDelYes" onclick="removeFromCart();">Yes</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="clearCartModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Clear Cart</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" id="clearCartMessageBody">
+                    Are you sure, you want to clear cart!
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnClearCartYes" onclick="clearCart();">Yes</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/Scripts/jquery-3.5.1.js"></script>
+
+    @Scripts.Render("~/bundles/popper")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript" src="~/assets/pagination.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+    @RenderSection("scripts", required: false)
+
+    <script>
+        var _cartId = '';
+        $(document).ready(function () {
+
+            $('.mobile-cart').on('click', function (e) {
+                e.preventDefault();
+                showMobilePopup();
+            });
+            $('#txtSearch').on('keyup click', function () {
+                filterGlobal();
+            });
+            function showMobilePopup() {
+                $('.dropdown-content').fadeIn();
+                $('.load-runner').show();
+                $('.nav-tabs a:first').tab('show');
+                $('.hide-for-saved').show();
+                $('#hdnSelectedTab').val('cart');
+                $('#clearCartMessageBody').html('Are you sure, you want to clear cart!');
+                //getCartDetails('1');
+                setTimeout(() => { getCartDetails('1'); getSavedItems('1'); }, 500);
+            }
+
+            $('.dropdown-content').hide();
+            $(".dropbtn").hover(function () {
+                $('.dropdown-content').fadeIn();
+                $('.load-runner').show();
+                $('.nav-tabs a:first').tab('show');
+                $('.hide-for-saved').show();
+                $('#hdnSelectedTab').val('cart');
+                $('#clearCartMessageBody').html('Are you sure, you want to clear cart!');
+                //getCartDetails('1');
+                setTimeout(() => { getCartDetails('1'); getSavedItems('1'); }, 500);
+            }, function () {
+                setTimeout(function () {
+                    if (!($('.dropdown-content:hover').length > 0))
+                        $('.dropdown-content').fadeOut();
+                }, 300);
+            });
+
+            $(".hoverModalclose").on('click', function () {
+                $('.dropdown-content').fadeOut();
+            });
+
+            $(".nav-tabs a").click(function (e) {
+                event.preventDefault();
+                var tabName = e.target.innerHTML;
+                $('#hdnSelectedTab').val(tabName);
+                filterGlobal();
+                if (tabName == 'Saved Item') {
+                    $('.hide-for-saved').hide();
+                    $('#clearCartMessageBody').html('Are you sure, you want to clear saved items!');
+                }
+                else {
+                    $('#clearCartMessageBody').html('Are you sure, you want to clear cart!');
+                    $('.hide-for-saved').show();
+                }
+                $(this).tab('show');
+            });
+
+
+        });
+        function getCartDetails(id) {
+            $('.load-runner').show();
+
+        $.ajax({
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            url: "/home/GetCartDetails",
+            data: { 'id': id },
+            //dataType: "json",
+            async: false,
+            success: function (data) {
+                $('#tblCartItemContainer').empty();
+                $('#tblCartItemContainer').html(data);
+                var _rowCount = parseInt($('#hdnRowCount').val());
+                var _savedItemRowCount = parseInt($('#hdnSavedItemRowCount').val());
+                if (_rowCount === 0) {
+                    $('.hide-checkout-button').hide();
+                }
+                else {
+                    $('.hide-clear-button').show();
+                    $('.hide-checkout-button').show();
+                }
+                if (_rowCount === 0 && _savedItemRowCount === 0) {
+                    $('.hide-clear-button').hide();
+                }
+                $('.load-runner').hide();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(textStatus);
+            }
+        });
+    }
+    function getSavedItems(id) {
+        $('.load-runner').show();
+        $.ajax({
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            url: "/home/GetSavedItems",
+            data: { 'id': id },
+            //dataType: "json",
+            async: false,
+            success: function (data) {
+                $('#saved').empty();
+                $('#saved').html(data);
+                var _rowCount = parseInt($('#hdnRowCount').val());
+                var _savedItemRowCount = parseInt($('#hdnSavedItemRowCount').val());
+                if (_rowCount === 0 && _savedItemRowCount === 0) {
+                    $('.hide-clear-button').hide();
+                }
+                else {
+                    $('.hide-clear-button').show();
+                }
+                $('.load-runner').hide();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                $('.load-runner').hide();
+                alert(textStatus);
+            }
+        });
+    }
+        function removeFromCart() {
+            $('.load-runner').show();
+            var _selectedTab = $('#hdnSelectedTab').val();
+        $.ajax({
+            url: '@Url.Action("RemoveFromCart", "Home")',
+            type:"GET",
+            //dataType: "JSON",
+            data: { cartId: _cartId, tabName: _selectedTab },
+            //processData: false,
+            contentType: false,
+            success: function (response) {
+                setTimeout(() => { getCartDetails('1'); getSavedItems('1');}, 500);
+                _cartId = '';
+            },
+            error: function (req, status, error) {
+                $('.load-runner').hide();
+                console.log(error);
+            }
+        });
+        }
+        function showDeleteConfirm(id) {
+            //Call your Function here
+            $('#deleteModal').modal('show');
+            _cartId = id;
+        }
+        function openClearCartModal() {
+            //Call your Function here
+            $('#clearCartModal').modal('show');
+            _cartId = '';
+        }
+        function updateQuantity(type, id, quant) {
+            //type=inc/des
+            debugger;
+            $('.load-runner').show();
+            if (quant === 1 && type == 'des') {
+                _cartId = id;
+                removeFromCart();
+            }
+            else {
+                $.ajax({
+                    url: '@Url.Action("UpdateItemQuantity", "Home")',
+                    type: "GET",
+                    //dataType: "JSON",
+                    data: { CartId: id, Type: type },
+                    //processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        //getCartDetails('1');
+                        setTimeout(() => { getCartDetails('1'); }, 500);
+                        _cartId = '';
+                    },
+                    error: function (req, status, error) {
+                        $('.load-runner').hide();
+                        console.log(error);
+                    }
+                });
+            }
+        }
+        function clearCart() {
+            $('.load-runner').show();
+            var _selectedTab = $('#hdnSelectedTab').val();
+        $.ajax({
+            url: '@Url.Action("ClearCart", "Home")',
+            type:"GET",
+            //dataType: "JSON",
+            data: { id: 'chandan.kumar@kcc.com', tabName: _selectedTab},
+            //processData: false,
+            contentType: false,
+            success: function (response) {
+                setTimeout(() => { getCartDetails('1'); getSavedItems('1');}, 500);
+                _cartId = '';
+            },
+            error: function (req, status, error) {
+                $('.load-runner').hide();
+                console.log(error);
+            }
+            });
+        }
+        function moveToSavedItem(recordId) {
+            $('.load-runner').show();
+        $.ajax({
+            url: '@Url.Action("MoveToSavedItem", "Home")',
+            type:"GET",
+            //dataType: "JSON",
+            data: { id: recordId },
+            //processData: false,
+            contentType: false,
+            success: function (response) {
+                setTimeout(() => { getCartDetails('1'); getSavedItems('1');}, 500);
+                _cartId = '';
+            },
+            error: function (req, status, error) {
+                $('.load-runner').hide();
+                console.log(error);
+            }
+            });
+    }
+    function movedToCart(productSku) {
+            $('.load-runner').show();
+        $.ajax({
+            url: '@Url.Action("MoveToCart", "Home")',
+            type:"GET",
+            //dataType: "JSON",
+            data: { sku: productSku, email: 'chandan.kumar@kcc.com' },
+            //processData: false,
+            contentType: false,
+            success: function (response) {
+                setTimeout(() => { getCartDetails('1'); getSavedItems('1'); }, 500);
+                _cartId = '';
+            },
+            error: function (req, status, error) {
+                $('.load-runner').hide();
+                console.log(error);
+            }
+            });
+        }
+    </script>
+</body>
+</html>

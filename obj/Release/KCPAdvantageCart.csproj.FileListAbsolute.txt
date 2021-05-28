@@ -1,0 +1,172 @@
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageCart.dll.config
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageCart.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageCart.pdb
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csc.exe
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csc.exe.config
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csc.rsp
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csi.exe
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csi.exe.config
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csi.rsp
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.AppContext.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Collections.Immutable.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Console.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Globalization.Calendars.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.Compression.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.FileSystem.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Net.Http.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Net.Sockets.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Reflection.Metadata.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.ValueTuple.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.XPath.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\vbc.exe
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\vbc.exe.config
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\vbc.rsp
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\VBCSCompiler.exe
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\VBCSCompiler.exe.config
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Antlr3.Runtime.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.SqlServer.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageModel.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Microsoft.Web.Infrastructure.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Newtonsoft.Json.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Helpers.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Mvc.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Optimization.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Razor.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Deployment.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Razor.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\WebGrease.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageModel.pdb
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageModel.dll.config
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.SqlServer.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Helpers.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Mvc.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Optimization.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Razor.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Deployment.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Razor.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Newtonsoft.Json.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Antlr3.Runtime.pdb
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.csprojAssemblyReference.cache
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.csproj.CoreCompileInputs.cache
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.csproj.CopyComplete
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.dll
+C:\Hackathon\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.pdb
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageCart.dll.config
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageCart.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageCart.pdb
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csc.exe
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csc.exe.config
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csc.rsp
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csi.exe
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csi.exe.config
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\csi.rsp
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.AppContext.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Collections.Immutable.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Console.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Globalization.Calendars.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.Compression.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.FileSystem.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Net.Http.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Net.Sockets.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Reflection.Metadata.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.ValueTuple.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.XPath.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\vbc.exe
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\vbc.exe.config
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\vbc.rsp
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\VBCSCompiler.exe
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\roslyn\VBCSCompiler.exe.config
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Antlr3.Runtime.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.SqlServer.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageModel.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Microsoft.Web.Infrastructure.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Newtonsoft.Json.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Helpers.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Mvc.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Optimization.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Razor.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Deployment.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Razor.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\WebGrease.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageModel.pdb
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\KCPAdvantageModel.dll.config
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\EntityFramework.SqlServer.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Helpers.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Mvc.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Optimization.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.Razor.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Deployment.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\System.Web.WebPages.Razor.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Newtonsoft.Json.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Antlr3.Runtime.pdb
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.csprojAssemblyReference.cache
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.csproj.CoreCompileInputs.cache
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.csproj.CopyComplete
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.dll
+C:\Smart Cart\KCPAdvanatgeDemo\KCPAdvantageCart\KCPAdvantageCart\obj\Release\KCPAdvantageCart.pdb

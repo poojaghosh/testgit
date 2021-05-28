@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="KCPAdvanatgeEntities-Web.config Connection String" description="KCPAdvanatgeEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Entity.AdvantageModel.csdl|res://*/Entity.AdvantageModel.ssdl|res://*/Entity.AdvantageModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kcinnovators.cx7mps3dkdfj.ap-south-1.rds.amazonaws.com;initial catalog=BlockChain;user id=kcinnovators;password=kcinnovators;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\BlockChainPayment\\BlockChainPayment\\BlockChainPayment\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='KCPAdvanatgeEntities']/@connectionString" />
+  </parameter>
+</parameters>

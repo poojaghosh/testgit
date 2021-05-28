@@ -1,0 +1,44 @@
+﻿body, html, .main {
+    height: 100%;
+    background: ;
+}
+
+.opac {
+    opacity: .65;
+}
+
+.tab-content.sub-content {
+    background: #BFE1E1;
+}
+
+.btn.paynow {
+    background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+}
+
+#sel1 {
+    background-color: lavenderblush;
+}
+
+.paynow.disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+footer {
+    background:#223167 !important;
+    color:white;
+}
+
+@media (max-width:767px) {
+    .cart-row .proID, .cart-row .proName {
+        width: 170px;
+    }
+
+    section {
+        padding: 0px;
+    }
+
+    .btn.paynow {
+        margin-top: 10px;
+    }
+}

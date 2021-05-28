@@ -1,0 +1,484 @@
+﻿@model IEnumerable<KCPAdvantageCart.Models.AdvantageBO.CartEntity>
+@{
+    ViewBag.Title = "CheckOutPage";
+}
+
+<link href="~/Content/checkout.css" rel="stylesheet" />
+<div class="cart-container">
+    <div class="tab-content sub-content">
+
+        <div class="modal-es-header container">
+            <div class="row">
+                <div class="col text-right">
+                    <div class="close-wrap">
+                        <a href="javascript:void(0)" class="hoverModalclose"><span></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col text-left totaliteam">
+                    Total Items : <span class="itemcount">02</span>
+                </div>
+                <div class="col text-right subtotal">
+                    Subtotal : <span class="subtotals">$0.00</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div id="searchArea">
+                    </div>
+                </div>
+                <!-- <div class="col text-right">
+                    <a href="#" class="button cart-btn" onclick="openClearCartModal();">Clear Cart</a>
+                </div> -->
+            </div>
+
+        </div>
+        <div class="container" style="padding-bottom:15px;">
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-bordered table-striped dataTable dtr-inline table-sm" role="grid" id="dataTables-CartList">
+                        <!-- Table Header Starts -->
+                        <thead>
+                            <tr role="row">
+                                <th class="th-sm">
+                                    Product
+                                </th>
+                                <th class="th-sm">
+                                    Description
+                                </th>
+                                <th class="th-sm">
+                                    Cost
+                                </th>
+                            </tr>
+                        </thead>
+                        <!-- Table Header Ends -->
+                        <tbody id="tblCartItems">
+                            @foreach (var item in Model)
+                            {
+                                string imageName = item.ProductSKU + ".jpg";
+                                <tr class="cart-row">
+                                    <td>
+                                        <div class="img-wrap">
+                                            <img src="~/assets/Images/@imageName" alt="" class="imageSpin">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="proID"><span>SKU : <a href="https://www.kcpadvantage.com/product-detail?product=@item.ProductSKU" target="_blank">@item.ProductSKU</a></span></p>
+                                        <p class="proName" data-toggle="tooltip" data-container="body" data-html="true" title="" data-original-title="@item.ProductName"><span>@item.ProductName</span></p>
+                                        <div class="proQty">
+                                            <p>Qty :</p>
+                                            <p class="countHolder" name="guestCount" value="@item.Quantity" readonly="readonly">@item.Quantity</p>
+                                            @*<ul class="guestCounter">
+                                                    <li data-btn-type="decrement"><button class="romoveBtn minus" data-catid="@item.Id" data-quant="@item.Quantity"><i class="fa fa-minus"></i></button></li>
+                                                    <li class="counterText"><input type="text" class="countHolder" name="guestCount" value="@item.Quantity" readonly="readonly" /> </li>
+                                                    <li data-btn-type="increment"><button class="romoveBtn plus" data-catid="@item.Id" data-quant="@item.Quantity"><i class="fa fa-plus"></i></button> </li>
+                                                </ul>*@
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="cut-price">$@item.MSRP</p>
+                                        <p class="proAmt">$@String.Format("{0:0.00}", item.UnitTotalCost)</p>
+                                        <p class="off-price">@item.Discount% off</p>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a id="checkout" href="javascript:return void(0);" type="button" class="btn btn-primary pull-right">Next</a>
+                    <div id="ShippingForm">
+                        <p>
+                            <div class="main" id="section1">
+                                <h2>Shipping Details:</h2>
+                                Test User<br />
+                                Road no. 8, 3rd cross street<br />
+                                Green Valley, AL, USA<br />
+                                Zipcode: 35006<br />
+                                Mobile: 1234567890<br />
+                            </div>
+                            <a id="shipcontinue" href="javascript:return void(0);" class="btn btn-primary pull-right">Continue Payment</a> <br />
+                        </p>
+                    </div>
+                    <section id="PaymentForm" class="mb-3">
+                        <h2>Payment Options</h2>
+                        <form>
+                            <div class="main" id="section2">
+                                <button type="button" class="btn btn-primary">CreditCard</button>
+                                <button type="button" class="btn btn-primary">NetBanking</button>
+                                <a id="paymoreoptions" href="javascript:return void(0);" data-position="paymore" type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">+ More</a>
+                                <br>
+                            </div>
+                        </form>
+                    </section>
+                    <section id="PayMore" class="mb-3">
+                        <div id="sectionPayMore">
+                            <input type="image" id="image" alt="Login"
+                                   src="@Url.Content("~/assets/Paypal-icon.png")" width="150" height="90">
+                            <a id="bitPay" href="javascript:void(0);">
+                                <input type="image" id="image" alt="Login"
+                                       src="@Url.Content("~/assets/Bitpay-icon.png")" width="150" height="90">
+                            </a>
+                            <a id="popularwallets" href="javascript:return void(0);">
+                                <input type="image" id="image" alt="Login"
+                                       src="@Url.Content("~/assets/cryptocurrency-icon.png")" width="150" height="90" />
+                            </a>
+                            <a id="visa" href="#sectionPopularWallets">
+                                <input type="image" id="image" alt="Login"
+                                       src="@Url.Content("~/assets/visa.PNG")" width="160" height="90" />
+                            </a>
+
+                            <br />
+
+                            <a href="">
+                                <button class="btn btn-outline-dark"> Pay with Cash</button>
+                            </a>
+                        </div>
+                    </section>
+                    <section id="PopularWallets" class="mb-4">
+                        <div class="main" id="sectionPopularWallets">
+                            <h2>Popular Wallets</h2>
+                            <label class="radio-inline">
+                                <input id="CoinPayment" type="radio" class="mr-2 radio-coinpayment-wallet" name="pw" width="150" height="90" value="CoinPayment"><img class="img-crypto" src="@Url.Content("~/assets/Images/WalletsOptions/CoinPayments.JPG")" alt="CoinPayment" />
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" class="mr-2 radio-wallet" name="pw" width="150" height="90" value="Binance"><img class="img-crypto" src="@Url.Content("~/assets/Images/WalletsOptions/Binance.JPG")" alt="Binance" />
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" class="mr-2 radio-wallet" name="pw" value="Coin Delta"><img class="img-crypto" src="@Url.Content("~/assets/Images/WalletsOptions/CoinDelta.JPG")" alt="Coin Delta" />
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" class="mr-2 radio-wallet" name="pw" value="Coin Base"><img class="img-crypto" src="@Url.Content("~/assets/Images/WalletsOptions/CoinBase.JPG")" alt="Coin Base" />
+                            </label>
+
+                            <div class="dropdown checkbox-inline">
+
+                                <input type="radio" class="mr-2 radio-wallet" name="pw" id="selr" value="" style="opacity:0"> &emsp;
+                                <select class="form-control radio-wallet" id="sel1" value="">
+                                    <option value="">--Other Wallets--</option>
+                                    <option value="Edge">Edge</option>
+                                    <option value="Electrum">Electrum</option>
+                                    <option value="MyCelium">MyCelium</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary paynow disabled" id="paynow">Pay Now <span class="finalamt"></span></button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display:none;">
+    <input type="hidden" id="lblTotalItemQuantity" value="@ViewBag.ItemTotalQuantity" />
+    <input type="hidden" id="lblCartTotal" value="@String.Format("{0:0.00}", ViewBag.CartTotal)" />
+    <input type="hidden" id="hdnMasrpTotal" value="@String.Format("{0:0.00}", ViewBag.MsrpTotal)" />
+    <input type="hidden" id="hdnRowCount" value="@Model.Count()" />
+</div>
+<style>
+    .img-crypto {
+        width: 130px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .btn.paynow {
+        margin-top: 20px;
+    }
+</style>
+@section scripts{
+    <script>
+        var useremail = "chandan.kumar@kcc.com";
+        var cartTable;
+        var noRecordFoundMessage = 'cart list is empty.';
+        
+        $(document).ready(function () {
+            
+            //bitpay paid status
+            //setInterval(BitPayPaymentInvoiceStatus, 5000);
+
+            // Add smooth scrolling to all links
+            $("#ShippingForm").hide();
+            $("#PaymentForm").hide();
+            $("#PayMore").hide();
+            $("#PopularWallets").hide();
+            $("#paynow").addClass("disabled");
+
+            $('.itemcount').html($('#lblTotalItemQuantity').val());
+            $('.subtotals, .finalamt').html('$' + $('#lblCartTotal').val());
+            $('#lblMsrpTotal').html('$' + $('#hdnMasrpTotal').val());
+            var _totalDiscount = parseFloat($('#hdnMasrpTotal').val()) - parseFloat($('#lblCartTotal').val());
+            console.log(_totalDiscount);
+            $('#totalDis').html('$' + _totalDiscount.toFixed(2));
+
+
+            GetCartDetails();
+
+            $("#checkout").on('click', function (event) {
+                $("#ShippingForm").show('slide');
+                $("#dtBasicExample").addClass("opac");
+                $(this).addClass('disabled');
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    $(this).addClass('disabled');
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $("#shipcontinue").on('click', function (event) {
+                GenerateCartOrders();
+                $("#PaymentForm").show('slide');
+                $("#ShippingForm").addClass("opac");
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    $(this).addClass('disabled');
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $("#paymoreoptions").on('click', function (event) {
+                $("#PayMore").show('slide');
+                var x = $(this).offset();
+                // Make sure this.hash has a value before overriding default behavior
+                if (x.top > 0 ) {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    $('html, body').animate({ scrollTop: x.top + 200 }, 800);
+                }
+            });
+
+            $("#popularwallets").on('click', function (event) {
+                $("#PopularWallets").show('slide');
+                // Make sure this.hash has a value before overriding default behavior
+                var x = $(this).offset();
+                if (x.top > 0) {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    $('html, body').animate({ scrollTop: x.top + 200 }, 800);
+                }
+
+
+                $('select#sel1').on('change', function () {
+                    //ways to retrieve selected option and text outside handler
+                    console.log('Changed option value ' + this.value);
+                    console.log('Changed option text ' + $(this).find('option').filter(':selected').text());
+                    $("#selr").prop('checked', true);
+
+
+                });
+
+                $('.radio-coinpayment-wallet').on('change', function () {
+                    $("#paynow").removeClass("disabled");
+                });
+
+                $('.radio-wallet').on('change', function () {
+                    if (!$("#paynow").hasClass("disabled"))
+                    $("#paynow").addClass("disabled");
+                });
+                // if(pay_option !== '' || pay_rd !== ''){
+                //         console.log(pay_option);
+                //         $("#paynow").removeClass("disabled");
+
+                //     }
+                //     else{
+                //         $("#paynow").addClass("disabled");
+                //     }
+
+
+
+            });
+
+            $(".continuepayment").on('click', function () {
+                GenerateCartOrders();
+            });
+
+            $("#bitPay").on('click', function () {
+
+                BitPayPayment();
+            })
+
+            $("#paynow").on('click', function () {
+
+                CoinPayment();
+
+            })
+
+            $('.radio-coinpayment-wallet').on('change', function () {
+                $("#paynow").removeClass("disabled");
+            });
+
+            //var amt = $("span.subtotal").text();
+            //$("span.finalamt").html(amt);
+
+            $('.second-nav').removeClass('d-md-block');
+            $('#dataTables-CartList_length').css('display', 'none');
+            $('#dataTables-CartList_filter').css('display', 'none');
+
+        });
+
+        function GetCartDetails() {
+            if (cartTable != null) { cartTable.destroy(); }
+            cartTable = $("#dataTables-CartList").DataTable({
+                paging: false,
+                "pagingType": "full_numbers",
+                destroy: true,
+                searching: true,
+                select: false,
+                responsive: true,
+                lengthChange: true,
+                info: false,
+                sort:false,
+                "autoWidth": false,
+                "language": {
+                    "emptyTable": noRecordFoundMessage,
+                    "paginate": {
+                        "previous": "<",
+                        "next": ">",
+                        "sFirst": "<<",
+                        "sLast": ">>"
+
+                    }
+                }
+
+            });
+            cartTable.draw();
+        }
+
+        function GenerateCartOrders() {
+            $('.load-runner').show();
+            $.ajax({
+                url: '@Url.Action("GenerateOrders", "Home")',
+                type: "GET",
+                //dataType: "JSON",
+                data: { Id: useremail },
+                //processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.Status == true) {
+                        localStorage.setItem("OrderId", response.OrderId);
+                    }
+                },
+                error: function (req, status, error) {
+                    $('.load-runner').hide();
+                    console.log(error);
+                }
+            });
+        }
+
+        function CoinPayment() {
+            $('.load-runner').show();
+
+            var orderid = localStorage.getItem("OrderId");
+            $.ajax({
+                url: '@Url.Action("ProcessCheckout", "CoinPayment")',
+                type: "GET",
+                //dataType: "JSON",
+                data: { orderId: orderid, userEmail: useremail },
+                //processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.Status == true) {
+                        localStorage.setItem("InvoiceId", response.InvoiceId);
+
+                        window.location = response.ReturnUrl;
+                       // window.location = "https://www.coinpayments.net/index.php?ipn_version=1.0&cmd=_pay_auto&ipn_type=simple&ipn_mode=hmac&merchant=a53761834ba1a584e6ab8a1333968b21&allow_extra=0&currency=USD&amountf=70.00&item_name=Programming%20C%23%20for%20Beginners&success_url=https%3A%2F%2Flocalhost%3A44397%2FCoinPayments%2FSuccessHandler%3ForderNumber%3Da8ae1cde-3b83-4ae9-b5e7-6efdd446b382&ipn_url=https%3A%2F%2Flocalhost%3A44397%2FCoinPayments%2FIPNHandler&cancel_url=https%3A%2F%2Flocalhost%3A44397%2FCoinPayments%2FCancelOrder&custom=a8ae1cde-3b83-4ae9-b5e7-6efdd446b382&first_name=John&last_name=Smith&email=testKCSpartansData@gmail.com";
+                    }
+                },
+                error: function (req, status, error) {
+                    $('.load-runner').hide();
+                    console.log(error);
+                }
+            });
+        }
+
+        function BitPayPayment() {
+            $('.load-runner').show();
+            var orderid = localStorage.getItem("OrderId");
+            $.ajax({
+                url: '@Url.Action("BitCoinPay", "BitPay")',
+                type: "GET",
+                //dataType: "JSON",
+                data: { orderId: orderid, userEmail: useremail },
+                //processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.Status == true) {
+                        localStorage.setItem("BitPayInvoiceId", response.InvoiceId);
+                        window.location = response.ReturnUrl;
+                    }
+                },
+                error: function (req, status, error) {
+                    $('.load-runner').hide();
+                    console.log(error);
+                }
+            });
+        }
+
+        function BitPayPaymentInvoiceStatus() {
+            if (localStorage.getItem("BitPayInvoiceId").length > 0 && localStorage.getItem("OrderId").length > 0) {
+                $('.load-runner').show();
+                var invoiceid = localStorage.getItem("BitPayInvoiceId");  //"Voaz9PUuVa2KKdascB3iGq"
+                var orderid = localStorage.getItem("OrderId");
+                $.ajax({
+                    url: '@Url.Action("BitPayInvoiceStatus", "BitPay")',
+                    type: "GET",
+                    //dataType: "JSON",
+                    data: { invoiceId: invoiceid, orderId: orderid},
+                    //processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        $('.load-runner').hide();
+                        localStorage.setItem("BitPayInvoiceId", "");
+                        localStorage.setItem("OrderId", "");
+                        if (response.Status == true) {
+                            var message = " Payment " + response.PaymentStatus + " successfull";
+                            swal({
+                                title: "Wow!",
+                                text: message,
+                                type: "success",
+                                confirmButtonText: "OK"
+                            },
+                                function (isConfirm) {
+                                    if (isConfirm) {
+                                        let a = document.createElement('a');
+                                        a.target = '_blank';
+                                        a.href = response.ReturnUrl;
+                                        a.click();
+                                    }
+                                });
+                        }
+                    },
+                    error: function (req, status, error) {
+                        $('.load-runner').hide();
+                        console.log(error);
+                    }
+                });
+            }
+        }
+    </script>
+}

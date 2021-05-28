@@ -1,0 +1,161 @@
+﻿@model IEnumerable<KCPAdvantageCart.Models.AdvantageBO.CartEntity>
+
+<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+    <thead style="display:none">
+        <tr>
+            <th class="th-sm">
+                Product
+            </th>
+            <th class="th-sm">
+                Description
+            </th>
+            <th class="th-sm">
+                Cost
+            </th>
+            <th class="th-sm">
+                Action
+            </th>
+
+        </tr>
+    </thead>
+    <tbody id="tblCartItems">
+        @foreach (var item in Model)
+        {
+            string imageName = item.ProductSKU + ".jpg";
+        <tr class="cart-row">
+            <td>
+                <div class="img-wrap">
+                    <img src="~/assets/Images/@imageName" alt="" class="imageSpin">
+                </div>
+            </td>
+            <td>
+                <p class="proID"><span>SKU : <a href="https://www.kcpadvantage.com/product-detail?product=@item.ProductSKU" target="_blank">@item.ProductSKU</a></span></p>
+                <p class="proName" data-toggle="tooltip" data-container="body" data-html="true" title="" data-original-title="@item.ProductName"><span>@item.ProductName</span></p>
+                <div class="proQty">
+                    <p>Qty :</p>
+                    <ul class="guestCounter">
+                        <li data-btn-type="decrement"><button class="romoveBtn minus" data-catid="@item.Id" data-quant="@item.Quantity"><i class="fa fa-minus"></i></button></li>
+                        <li class="counterText"><input type="text" class="countHolder" name="guestCount" value="@item.Quantity" readonly="readonly" /> </li>
+                        <li data-btn-type="increment"><button class="romoveBtn plus" data-catid="@item.Id" data-quant="@item.Quantity"><i class="fa fa-plus"></i></button> </li>
+                    </ul>
+                </div>
+                <div class="button_holder">
+                    <a href="#" class="buttons btn-blue" onclick="moveToSavedItem('@item.Id')">SAVE FOR LATER</a>
+                    <a href="javascript:return void(0);" class="buttons btn-red" onclick="showDeleteConfirm('@item.Id');">REMOVE</a>
+                </div>
+
+            </td>
+            <td>
+                <p class="cut-price">$@item.MSRP</p>
+                <p class="proAmt">$@String.Format("{0:0.00}", item.UnitTotalCost)</p>
+                <p class="off-price">@item.Discount% off</p>
+            </td>
+            <td style="display:none;"><i class="fa fa-trash removeRecord" id="showDeleteModal" title="Remove" data-toggle="modal" data-target="#myModal" onclick="showDeleteConfirm('@item.Id');"></i></td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+<div style="display:none;">
+    <input type="hidden" id="lblTotalItemQuantity" value="@ViewBag.ItemTotalQuantity" />
+    <input type="hidden" id="lblCartTotal" value="@String.Format("{0:0.00}", ViewBag.CartTotal)" />
+    <input type="hidden" id="hdnMasrpTotal" value="@String.Format("{0:0.00}", ViewBag.MsrpTotal)" />
+    <input type="hidden" id="hdnRowCount" value="@Model.Count()" />
+
+</div>
+<script type="text/javascript">
+    var noRecordFoundMessage = 'Cart is empty!';
+    $(document).ready(function () {
+        $('.itemcount').html($('#lblTotalItemQuantity').val());
+        $('#lblSubtotal').html('$' + $('#lblCartTotal').val());
+        $('#lblMsrpTotal').html('$' + $('#hdnMasrpTotal').val());
+        var _totalDiscount = parseFloat($('#hdnMasrpTotal').val()) - parseFloat($('#lblCartTotal').val());
+        console.log(_totalDiscount);
+        $('#totalDis').html('$' + _totalDiscount.toFixed(2));
+        $('.minus').on('click', function () {
+            var _catId = $(this).data('catid');
+            var _quant = parseInt($(this).data('quant'));
+            updateQuantity('des', _catId, _quant);
+        });
+        $('.plus').on('click', function () {
+            var _catId = $(this).data('catid');
+            var _quant = $(this).data('quant');
+            updateQuantity('inc', _catId, _quant);
+        });
+        myListtable = $("#dtBasicExample").DataTable({
+            paging: false,
+            "pagingType": "full_numbers",
+            destroy: true,
+            searching: true,
+            ordering: false,
+            select: false,
+            iDisplayLength: 2,
+            lengthChange: false,
+            info: false,
+            "bInfo": false,
+            pageLength: 0,
+            "language": {
+                search: '',
+                "emptyTable": noRecordFoundMessage,
+                "paginate": {
+                    "previous": "<",
+                    "next": ">",
+                    "sFirst": "<<",
+                    "sLast": ">>"
+
+                }
+            },
+            "dom": '<"pull-left"f><"pull-right"l>tip'
+        });
+        myListtable.draw();
+        $('.pull-left').hide();
+      /*$('#dtBasicExample').DataTable({
+            "searching": true, // false to disable search (or any other option)
+            "paging": false,
+            "bInfo": false,
+            //"fixedHeader": true,
+            //"scrollY": "400px",
+            //"scrollCollapse": true,
+            "language": { search: '', searchPlaceholder: "Search...", emptyTable: "Cart is empty!" },
+            "dom": '<"pull-left"f><"pull-right"l>tip'
+        });*/
+
+        /*$('#dtBasicExample').DataTable({
+            //"searching": false // false to disable search (or any other option)
+            "paging": false,
+            "bInfo": false,
+            "language": { search: '', searchPlaceholder: "Search..." },
+            initComplete: function () {
+                $("#dtBasicExample_filter").detach().appendTo('#searchArea');
+            }
+            
+        });*/
+
+
+  /* var table = $('#dtBasicExample').DataTable();
+    $('.dtBasicExample_filter').keyup(function () {
+        table.search($(this).val()).draw();
+    })*/
+
+
+        $('.dataTables_length').addClass('bs-select');
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $(".img-wrap").on('click', function () {
+            $(this).find('img').toggleClass("imageSpin");
+        });
+    });
+    function filterGlobal() {
+        $('#dtBasicExample').DataTable().search(
+            $('#txtSearch').val()
+        ).draw();
+        var data = $('#txtSearch').val();
+        if (data.length >= 1) {
+            $('#txtSearch').focus();
+            //$(".cleanField").css("display", "block");
+        } else {
+            //$(".cleanField").css("display", "none");
+        }
+    }
+</script>

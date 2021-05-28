@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'museo300';
+    src: url('font/Museo-300.eot');
+    src: url('font/Museo-300.eot?#iefix') format('embedded-opentype'), url('font/Museo-300.woff') format('woff'), url('font/Museo-300.ttf') format('truetype'), url('font/Museo-300.svg#Museo-300regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo500';
+    src: url('font/Museo-500.eot');
+    src: url('font/Museo-500.eot?#iefix') format('embedded-opentype'), url('font/Museo-500.woff') format('woff'), url('font/Museo-500.ttf') format('truetype'), url('font/Museo-500.svg#Museo-500regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo700';
+    src: url('font/Museo-700.eot');
+    src: url('font/Museo-700.eot?#iefix') format('embedded-opentype'), url('font/Museo-700.woff') format('woff'), url('font/Museo-700.ttf') format('truetype'), url('font/Museo-700.svg#Museo-700regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@media (min-width: 576px){
+	.kcp-wrapper .jumbotron {
+		padding: 0;
+		border-radius:0;
+		margin-bottom:0
+	}
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  display: flex;
+  align-items: center;
+}
+ 
+@media (min-width: 1200px){
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+		max-width: 58.75rem;
+	}
+}
+
+.kcp-wrapper{
+	font-family: 'museo500';
+}
+.kcp-wrapper header{
+	background-color: #223167;
+    height: 84px;
+}
+.kcp-wrapper header .navbar{
+	padding:0;
+}
+
+.kcp-wrapper header .navbar img.distributor-icon {
+    width: 25px;
+}
+.kcp-wrapper header .navbar li {
+    font-size: 12px;
+	float: left;
+    text-align: right;
+    list-style: none;
+    
+    color: #ffffff;
+    margin-right: 10px;
+}
+.kcp-wrapper header .navbar li a{
+	    color: #ffffff;
+		position: relative;
+    top: 2px;
+}
+.kcp-wrapper header .navbar li:last-child {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.kcp-wrapper header .navbar .product-list-number {
+    color: #609dc9;
+    border: 2px solid #609dc9;
+    width: 28px;
+    height: 28px;
+     
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    padding-top: 2px;
+    margin-left: 2px;
+    margin-top: -10px;
+    position: relative;
+    top: 0px;
+}
+.kcp-wrapper header .navbar .headerView {
+    /* display: inline-block; */
+    padding-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.kcp-wrapper .second-nav{
+	background:#008bc1
+}
+.kcp-wrapper .second-nav ul li img{
+	width:49px
+}
+.kcp-wrapper .second-nav .navbar-nav{
+	-ms-flex-direction: inherit;
+    flex-direction: inherit;
+}
+.kcp-wrapper .second-nav .nav-item{
+	margin:0 6px;
+}
+.kcp-wrapper .second-nav .nav-item:last-of-type{
+	margin-right:0;
+}
+.kcp-wrapper .second-nav li:hover img{
+	-webkit-box-shadow: 0 0 12px 2px rgba(162,227,253,1);
+    box-shadow: 0 0 12px 2px rgba(162,227,253,1);
+	    border-radius: 50%;
+}
+
+
+.cart-container {
+    display:block;
+    color:red;
+     
+    padding:20px 5px 10px;
+    
+	width:90%;
+	margin:0 auto;
+	position:absolute;
+	z-index:1;
+	background:#fff;
+	 
+	left:0;
+	right:0;
+	top:149px
+	background-color: white;
+    border-radius:2px;
+     
+    -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+	
+}
+.nav.nav-tabs.main-tabs~.tab-content{
+	border:1px solid #223167;
+	    border-radius: 0 0 10px 10px;
+		border-top: 0px solid transparent;
+		padding-bottom: 15px;
+}
+
+.cart-container h3.cart-header {
+        font-size: 18px;
+    font-family: "museo500";
+    color: rgb( 92, 73, 129 );
+    text-align: left;
+    display: inline-block;
+    margin: 0px;
+    line-height: 1;
+    position: relative;
+    top: 4px;
+    padding-left: 15px;
+}
+
+.main-tabs .nav-item img{
+	width:30px;
+	border-radius:50%;
+	height:30px;
+}
+
+.main-tabs.nav-tabs .nav-link{
+	border-radius:0;
+	border-color: #223167 #223167 #fff;
+}
+.nav.nav-tabs.main-tabs{
+	place-content: center;
+	border-bottom: 1px solid #223167;
+	
+}
+.nav-tabs.main-tabs .nav-item{
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:-1px;
+}
+.nav-tabs.sub-tabs .nav-link.active{
+	    background-color: rgb( 12, 139, 193 );
+}
+.nav-tabs.sub-tabs .nav-link{
+	font-size: 1.025rem;
+    line-height: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    font-family: "museo500";
+}
+.tab-content.sub-content{
+	border:1px solid rgb( 12, 139, 193 );
+	border-top:0px;
+}
+.nav-tabs.sub-tabs .nav-link.active{
+	   border:1px solid rgb( 12, 139, 193 );
+}
+.nav-tabs.sub-tabs {
+    border-bottom:1px solid rgb( 12, 139, 193 );
+}
+.close{
+	position: absolute;
+    
+    right: 5px;
+    line-height: 1;
+    top: 5px;
+}
+.form-control:focus,
+.btn-primary.focus, .btn-primary:focus,.btn-primary:not(:disabled):not(.disabled):active:focus{
+	box-shadow:none;
+}

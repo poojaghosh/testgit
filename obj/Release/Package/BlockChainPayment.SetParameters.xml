@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/" />
+  <setParameter name="KCPAdvanatgeEntities-Web.config Connection String" value="metadata=res://*/Entity.AdvantageModel.csdl|res://*/Entity.AdvantageModel.ssdl|res://*/Entity.AdvantageModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kcinnovators.cx7mps3dkdfj.ap-south-1.rds.amazonaws.com;initial catalog=BlockChain;user id=kcinnovators;password=kcinnovators;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+</parameters>
